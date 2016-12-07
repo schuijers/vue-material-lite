@@ -40,8 +40,7 @@ webpackConfig.module.rules.forEach((loader) => {
   if (loader.loader === 'vue-loader') {
     loader.options = {
       loaders: {
-        css: 'vue-style-loader!css-loader?sourceMap&importLoaders=1!' +
-             'postcss-loader',
+        css: 'vue-style-loader!css-loader?sourceMap&importLoaders=1!postcss-loader',
         js: 'babel-loader!eslint-loader',
       },
     };
