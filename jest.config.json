@@ -1,0 +1,17 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "!src/**/index.js"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "coverageReporters": [
+    "lcov",
+    "text"
+  ],
+  "moduleFileExtensions": [
+    "js"
+  ],
+  "rootDir": ".",
+  "testRegex": "<rootDir>/test/.*.spec.js"
+}

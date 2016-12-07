@@ -1,0 +1,25 @@
+{
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "plugins": [
+    "vue"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "max-len": [2, {
+      "code": 80,
+      "tabWidth": 2,
+      "ignoreUrls": true,
+      "ignoreStrings": true
+    }]
+  }
+}
