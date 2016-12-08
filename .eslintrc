@@ -4,9 +4,6 @@
     "jest": true,
     "node": true
   },
-  "plugins": [
-    "vue"
-  ],
   "extends": [
     "eslint:recommended",
     "google"
