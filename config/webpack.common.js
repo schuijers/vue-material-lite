@@ -1,15 +1,9 @@
 module.exports = {
-  resolve: {
-    extensions: [
-      '.vue',
-      '.js',
-    ],
-  },
   module: {
     rules: [
       {
         test: /\.css$/,
-        loader: 'css-loader?sourceMap&importLoaders=1!postcss-loader',
+        loader: 'vue-style-loader!css-loader?sourceMap&importLoaders=1!postcss-loader',
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
@@ -31,6 +25,12 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
       },
+    ],
+  },
+  resolve: {
+    extensions: [
+      '.vue',
+      '.js',
     ],
   },
 };

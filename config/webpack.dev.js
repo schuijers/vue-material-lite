@@ -1,7 +1,7 @@
-const commonConfig = require('./webpack.common.js');
-const webpackMerge = require('webpack-merge');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const commonConfig = require('./webpack.common.js');
+const webpack = require('webpack');
+const webpackMerge = require('webpack-merge');
 
 const webpackConfig = webpackMerge(commonConfig, {
   devServer: {

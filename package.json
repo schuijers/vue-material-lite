@@ -26,12 +26,12 @@
     "vue-router": "~2.1.1"
   },
   "devDependencies": {
-    "babel-core": "~6.18.2",
+    "babel-core": "~6.20.0",
     "babel-loader": "~6.2.9",
     "babel-preset-es2015": "~6.18.0",
     "babel-preset-stage-2": "~6.18.0",
     "css-loader": "~0.26.1",
-    "del-cli": "~0.2.0",
+    "del-cli": "~0.2.1",
     "eslint": "~3.11.1",
     "eslint-config-google": "~0.7.1",
     "eslint-loader": "~1.6.1",
@@ -53,12 +53,19 @@
     "webpack-merge": "~1.0.2"
   },
   "scripts": {
+    "build": "npm run build:dist",
+    "prebuild:dist": "npm-run-all clean lint test",    
+    "build:dist": "webpack --env.dist",
+    "clean": "npm-run-all --parallel clean:*",
+    "clean:coverage": "del-cli coverage/**",
+    "clean:dist": "del-cli dist/**",
     "lint": "npm-run-all --parallel lint:*",
     "lint:css": "stylelint **/*.css",
     "lint:js": "eslint .",
     "serve": "webpack-dev-server --env.dev",
     "start": "npm run serve",
-    "test": "jest --config jest.config.json",
-    "test:local": "jest --config jest.config.json --watch"
+    "test": "npm run test:spec",
+    "pretest:spec": "npm run clean:coverage",    
+    "test:spec": "jest --config jest.config.json"
   }
 }

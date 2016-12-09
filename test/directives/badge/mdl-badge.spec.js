@@ -26,7 +26,7 @@ describe('The MdlBadge directive', () => {
     expect(vm.$el.getAttribute('data-badge')).toEqual('1');
   });
 
-  it('should add the \'mdl-badge--no-background\' class to the element when the \'no-background\' modifier is present', () => {
+  it('should add the \'mdl-badge--no-background\' class to the element if the \'no-background\' modifier is present', () => {
     const vm = new Vue({
       directives: {
         MdlBadge,
@@ -37,7 +37,7 @@ describe('The MdlBadge directive', () => {
     expect(vm.$el.classList.contains('mdl-badge--no-background')).toBeTruthy();
   });
 
-  it('should add the \'mdl-badge--overlap\' class to the element when the \'overlap\' modifier is present', () => {
+  it('should add the \'mdl-badge--overlap\' class to the element if the \'overlap\' modifier is present', () => {
     const vm = new Vue({
       directives: {
         MdlBadge,

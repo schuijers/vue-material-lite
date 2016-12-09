@@ -1,17 +1,15 @@
-import MdlBadge from './directives/badge/mdl-badge';
+import {install} from './install';
 
-export const directives = {
-  MdlBadge,
-};
+/**
+ * Main class.
+ * @export
+ * @class VueMaterialLite
+ */
+export default class VueMaterialLite {
+}
 
-export default {
-  install(Vue) {
-    Object.keys(directives).forEach((name) => {
-      Vue.directive(name, directives[name]);
-    });
-  },
-};
+VueMaterialLite.install = install;
 
-export {
-  MdlBadge,
-};
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(VueMaterialLite);
+}
