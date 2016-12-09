@@ -1,7 +1,9 @@
 import MdlBadge from './directives/badge/mdl-badge';
+import MdlIcon from './directives/icon/mdl-icon';
 
 export const directives = {
   MdlBadge,
+  MdlIcon,
 };
 
 /**
